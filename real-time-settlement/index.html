@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Carbon Settlement | CarbonOnChain</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #10B981;
+            --primary-dark: #059669;
+            --secondary: #3B82F6;
+            --dark: #111827;
+            --darker: #0F172A;
+            --light: #F3F4F6;
+            --accent: #F59E0B;
+            --carbon: #1F2937;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--dark);
+            color: white;
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 100%;
+            padding: 0 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Navigation */
+        .page-header {
+            padding: 2rem 0 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .home-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            transition: transform 0.3s;
+        }
+        
+        .home-btn:hover {
+            transform: translateX(-5px);
+        }
+        
+        /* Content Section */
+        .content-section {
+            padding: 3rem 0;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        
+        h1 span {
+            color: var(--primary);
+        }
+        
+        h2 {
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem;
+            color: var(--primary);
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            opacity: 0.9;
+            max-width: 800px;
+        }
+        
+        .highlight-box {
+            background: rgba(16, 185, 129, 0.1);
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem;
+            border-radius: 0 8px 8px 0;
+            margin: 2rem 0;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+        
+        .feature-card {
+            background: rgba(31, 41, 55, 0.6);
+            border-radius: 12px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .feature-card h3 {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-icon {
+            color: var(--primary);
+        }
+        
+        .cta-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            padding: 0.75rem 1.5rem;
+            border: 1px solid var(--primary);
+            border-radius: 6px;
+            transition: all 0.3s;
+        }
+        
+        .cta-link:hover {
+            background: var(--primary);
+            color: white;
+            gap: 0.8rem;
+        }
+        
+        .polygon-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(130, 71, 229, 0.1);
+            color: #8247E5;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-weight: 600;
+            margin: 1rem 0;
+        }
+        
+        /* Footer */
+        .page-footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 2rem 0;
+            margin-top: 3rem;
+            text-align: center;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+        
+        @media (min-width: 768px) {
+            h1 {
+                font-size: 3rem;
+            }
+            
+            .feature-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Page Header with Home Button -->
+        <header class="page-header">
+            <a href="https://carbononchain.com" class="home-btn">
+                <i class="fas fa-arrow-left"></i> Back to Home
+            </a>
+            <div class="polygon-badge">
+                <i class="fas fa-bolt"></i> Powered by Polygon
+            </div>
+            <h1>Real-Time <span>Settlement</span></h1>
+            <p>Instant T+0 settlement eliminates counterparty risk and accelerates capital efficiency in carbon markets.</p>
+        </header>
+        
+        <!-- Main Content -->
+        <section class="content-section">
+            <div class="highlight-box">
+                <h2>Why Settlement Speed Matters</h2>
+                <p>Traditional carbon markets operate with T+2 or T+3 settlement cycles, creating counterparty risk and capital inefficiencies. Our blockchain-native solution settles trades instantly, freeing up capital and reducing systemic risk.</p>
+            </div>
+            
+            <h2>How It Works</h2>
+            <p>When a trade executes on CarbonOnChain:</p>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3><i class="fas fa-exchange-alt feature-icon"></i> Atomic Swaps</h3>
+                    <p>Carbon credits and payment tokens are exchanged simultaneously in a single blockchain transaction, eliminating settlement risk.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3><i class="fas fa-clock feature-icon"></i> 24/7 Availability</h3>
+                    <p>Markets never close with blockchain settlement. Trade carbon credits anytime without waiting for market opens.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3><i class="fas fa-lock feature-icon"></i> Non-Custodial</h3>
+                    <p>Assets never leave your wallet until settlement occurs, removing custodial risk from the equation.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3><i class="fas fa-search-dollar feature-icon"></i> Transparent Pricing</h3>
+                    <p>Every settlement is recorded on-chain, providing auditable proof of execution prices.</p>
+                </div>
+            </div>
+            
+            <h2>Institutional Benefits</h2>
+            <p>For funds and corporations trading carbon credits at scale:</p>
+            <ul style="margin-left: 1.5rem; margin-bottom: 2rem; opacity: 0.9;">
+                <li style="margin-bottom: 0.5rem;">Eliminate failed settlement costs</li>
+                <li style="margin-bottom: 0.5rem;">Reduce working capital requirements</li>
+                <li style="margin-bottom: 0.5rem;">Minimize price slippage between trade and settlement</li>
+                <li style="margin-bottom: 0.5rem;">Automate reconciliation with on-chain records</li>
+            </ul>
+            
+            <a href="https://carbononchain.com/verified-inventory" class="cta-link">
+                Explore Verified Inventory <i class="fas fa-arrow-right"></i>
+            </a>
+        </section>
+        
+        <!-- Footer -->
+        <footer class="page-footer">
+            <p>© 2023 CarbonOnChain. All settlement data verifiable on Polygon blockchain.</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Simple animation on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const featureCards = document.querySelectorAll('.feature-card');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            featureCards.forEach(card => {
+                card.style.opacity = 0;
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'all 0.6s ease-out';
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>
